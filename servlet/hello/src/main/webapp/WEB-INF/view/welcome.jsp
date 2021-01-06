@@ -3,11 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Welcome</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
+<header>
+    <h1>Welcome!</h1>
+    <h2>Please authenticate.</h2>
+</header>
+
+<main>
+    <form action="${pageContext.servletContext.contextPath}/login" method="post">
+        Username: <input type="text" name="username" value="Andrea"><br>
+        <button type="submit">Login</button>
+    </form>
+</main>
 </body>
 </html>
